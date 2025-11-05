@@ -2,6 +2,8 @@ const bcrypt = require("bcrypt");
 const { hashPassword } = require("../services/password/hashPassword");
 const { verifyPassword } = require("../services/password/verifyPassword");
 
+// Services
+
 describe("hashPassword", () => {
     const password = "motdepassetressecure";
 
