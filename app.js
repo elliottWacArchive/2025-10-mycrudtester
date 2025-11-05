@@ -15,21 +15,20 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-
 app.use("/", indexRouter);
 app.use("/user", userRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
-	next(createError(404));
+    next(createError(404));
 });
 
 // error handler
 app.use(function (err, req, res, next) {
-	res.locals.message = err.message;
-	res.locals.error = req.app.get("env") === "development" ? err : {};
+    res.locals.message = err.message;
+    res.locals.error = req.app.get("env") === "development" ? err : {};
 });
 
 app.listen(8080, () => {
-	console.log("Server started on port 8080!");
+    console.log("Server started on port 8080!");
 });
