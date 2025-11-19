@@ -4,7 +4,8 @@
     "private": true,
     "scripts": {
         "start": "node app.js",
-        "test": "jasmine"
+        "test": "jasmine",
+        "test:js": "node spec/run.js --verbose"
     },
     "dependencies": {
         "bcrypt": "^6.0.0",
