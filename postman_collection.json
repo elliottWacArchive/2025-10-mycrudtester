@@ -1885,7 +1885,7 @@
                                     "    pm.response.to.have.status(200);",
                                     "});",
                                     "",
-                                    "pm.test('⚠️ SÉCURITÉ CRITIQUE: Password ne doit PAS être exposé', function () {",
+                                    "pm.test('SÉCURITÉ CRITIQUE: Password ne doit PAS être exposé', function () {",
                                     "    const jsonData = pm.response.json();",
                                     "    pm.expect(jsonData.data).to.not.have.property('password');",
                                     "});",
