@@ -25,8 +25,19 @@ app.use(function (req, res, next) {
 
 // error handler
 app.use(function (err, req, res, next) {
-    res.locals.message = err.message;
-    res.locals.error = req.app.get("env") === "development" ? err : {};
+    if (err instanceof SyntaxError && err.status === 400 && "body" in err) {
+        return res.status(400).json({
+            success: false,
+            message: "Invalid JSON format",
+        });
+    }
+
+    const statusCode = err.status || 500;
+    res.status(statusCode).json({
+        success: false,
+        message: err.message || "Internal server error",
+        ...(req.app.get("env") === "development" && { error: err.stack }),
+    });
 });
 
 app.listen(8080, () => {
