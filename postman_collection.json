@@ -2,7 +2,7 @@
     "info": {
         "_postman_id": "crud-api-tests-collection",
         "name": "CRUD API - Tests Fonctionnels",
-        "description": "Collection de tests fonctionnels complets pour l'API CRUD avec authentification JWT",
+        "description": "tests fonctionnels pour l'API my_crud-tester.",
         "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
     },
     "item": [
