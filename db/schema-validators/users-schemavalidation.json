@@ -1,31 +1,26 @@
 {
-	"validator": {
-		"$jsonSchema": {
-			"bsonType": "object",
-			"required": [
-				"active",
-				"email",
-				"password",
-				"username"
-			],
-			"properties": {
-				"active": {
-					"bsonType": "bool",
-					"description": "Active status of the user, default is true"
-				},
-				"email": {
-					"bsonType": "string",
-					"description": "Email of the user (must be unique)"
-				},
-				"password": {
-					"bsonType": "string",
-					"description": "Password of the user"
-				},
-				"username": {
-					"bsonType": "string",
-					"description": "Username of the user"
-				}
-			}
-		}
-	}
+    "validator": {
+        "$jsonSchema": {
+            "bsonType": "object",
+            "required": ["active", "email", "password", "username"],
+            "properties": {
+                "active": {
+                    "bsonType": "bool",
+                    "description": "Active status of the user, default is true"
+                },
+                "email": {
+                    "bsonType": "string",
+                    "description": "Email of the user (must be unique)"
+                },
+                "password": {
+                    "bsonType": "string",
+                    "description": "Password of the user"
+                },
+                "username": {
+                    "bsonType": "string",
+                    "description": "Username of the user"
+                }
+            }
+        }
+    }
 }
