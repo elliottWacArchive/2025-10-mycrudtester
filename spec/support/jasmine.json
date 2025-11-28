@@ -5,5 +5,5 @@
     "jsLoader": "require",
     "stopSpecOnExpectationFailure": false,
     "stopOnSpecFailure": false,
-    "random": true
+    "random": false
 }
